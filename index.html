@@ -1,25 +1,44 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Grunt-plugin-test by Kelvin-09</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Grunt-plugin-test</h1>
-      <h2 class="project-tagline">The practice of making grunt plugin.</h2>
-      <a href="https://github.com/Kelvin-09/grunt-plugin-test" class="btn">View on GitHub</a>
-      <a href="https://github.com/Kelvin-09/grunt-plugin-test/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/Kelvin-09/grunt-plugin-test/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Kelvin-09/grunt-plugin-test">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Kelvin-09/grunt-plugin-test/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Kelvin-09/grunt-plugin-test/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <section class="main-content">
-      <h1>
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Grunt-plugin-test</h1>
+          <p>The practice of making grunt plugin.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Kelvin-09">Kelvin-09</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
 <a id="grunt-plugin-test" class="anchor" href="#grunt-plugin-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>grunt-plugin-test</h1>
 
 <blockquote>
@@ -62,20 +81,20 @@
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h3>
 
 <h4>
-<a id="optionsseparator" class="anchor" href="#optionsseparator" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.separator</h4>
+<a id="optionswho" class="anchor" href="#optionswho" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.who</h4>
 
 <p>Type: <code>String</code>
-Default value: <code>',  '</code></p>
+Default value: <code>'test1'</code></p>
 
-<p>A string value that is used to do something with whatever.</p>
+<p>使用第一段代码</p>
 
 <h4>
-<a id="optionspunctuation" class="anchor" href="#optionspunctuation" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.punctuation</h4>
+<a id="optionscommentsymbol" class="anchor" href="#optionscommentsymbol" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.commentSymbol</h4>
 
 <p>Type: <code>String</code>
-Default value: <code>'.'</code></p>
+Default value: <code>'//'</code></p>
 
-<p>A string value that is used to do something else with whatever else.</p>
+<p>用来注释</p>
 
 <h3>
 <a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Examples</h3>
@@ -83,31 +102,13 @@ Default value: <code>'.'</code></p>
 <h4>
 <a id="default-options" class="anchor" href="#default-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default Options</h4>
 
-<p>In this example, the default options are used to do something with whatever. So if the <code>testing</code> file has the content <code>Testing</code> and the <code>123</code> file had the content <code>1 2 3</code>, the generated result would be <code>Testing, 1 2 3.</code></p>
-
-<div class="highlight highlight-js"><pre>grunt.initConfig({
-  plugin_test<span class="pl-k">:</span> {
-    options<span class="pl-k">:</span> {},
-    files<span class="pl-k">:</span> {
-      <span class="pl-s"><span class="pl-pds">'</span>dest/default_options<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>src/testing<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>src/123<span class="pl-pds">'</span></span>],
-    },
-  },
-})</pre></div>
-
-<h4>
-<a id="custom-options" class="anchor" href="#custom-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Options</h4>
-
-<p>In this example, custom options are used to do something else with whatever else. So if the <code>testing</code> file has the content <code>Testing</code> and the <code>123</code> file had the content <code>1 2 3</code>, the generated result in this case would be <code>Testing: 1 2 3 !!!</code></p>
-
 <div class="highlight highlight-js"><pre>grunt.initConfig({
   plugin_test<span class="pl-k">:</span> {
     options<span class="pl-k">:</span> {
-      separator<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>: <span class="pl-pds">'</span></span>,
-      punctuation<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span> !!!<span class="pl-pds">'</span></span>,
+      who<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>test1<span class="pl-pds">'</span></span>,
+      commentSymbol<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>//<span class="pl-pds">'</span></span>
     },
-    files<span class="pl-k">:</span> {
-      <span class="pl-s"><span class="pl-pds">'</span>dest/default_options<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>src/testing<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>src/123<span class="pl-pds">'</span></span>],
-    },
+    dist<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>exapmle/*.js<span class="pl-pds">'</span></span>]
   },
 })</pre></div>
 
@@ -119,22 +120,16 @@ Default value: <code>'.'</code></p>
 <h2>
 <a id="release-history" class="anchor" href="#release-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release History</h2>
 
-<p><em>(Nothing yet)</em></p>
+<p>2015-04-14   v0.0.1   init</p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>Copyright (c) 2015 Kelvin. Licensed under the MIT license.</p>
+      </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/Kelvin-09/grunt-plugin-test">Grunt-plugin-test</a> is maintained by <a href="https://github.com/Kelvin-09">Kelvin-09</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
-
