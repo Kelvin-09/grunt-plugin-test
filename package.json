@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "The practice of making grunt plugin",
   "repository": "https://github.com/Kelvin-09/grunt-plugin-test",
+  "homepage": "http://kelvin-09.github.io/grunt-plugin-test/",
   "author": {
     "name": "Kelvin",
     "email": "kelvinsen@outlook.com",
